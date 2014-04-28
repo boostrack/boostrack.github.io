@@ -4626,7 +4626,7 @@ a:active {
 .navbar {
   height: 48px;
   min-width: 760px;
-  background-color: #ff4300;
+  background-color: #1b97d1;
   margin: 0px 1px 20px 1px;
 }
 /* line 180, ../sass/usergrid.scss */
@@ -4640,7 +4640,7 @@ a:active {
   float: left;
   top: 48px;
   left: -83px;
-  border-top: 8px solid #f03800;
+  border-top: 8px solid #1b97d1;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   opacity: 1;
@@ -4711,7 +4711,7 @@ a:active {
 }
 /* line 268, ../sass/usergrid.scss */
 .navbar .nav .active {
-  background-color: #b22714 !important;
+  background-color: #1b97d6 !important;
 }
 /* line 271, ../sass/usergrid.scss */
 .navbar .nav .active .go-home {
@@ -4742,7 +4742,7 @@ a:active {
   left: -1px;
   right: -2px;
   margin-bottom: 18px;
-  background-color: #b22714;
+  background-color: #1b97d6;
   z-index: 130;
   height: 42px;
   min-width: 880px;
