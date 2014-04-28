@@ -111,7 +111,7 @@ Usergrid.console.ui.collections = Usergrid.console.ui.collections || { };
         collections['picture'] = entity.picture;
       }
 
-      return $.tmpl("apigee.ui.collections.entity.header.html",
+      return $.tmpl("boostrack.ui.collections.entity.header.html",
         collections);
 
     },
@@ -122,7 +122,7 @@ Usergrid.console.ui.collections = Usergrid.console.ui.collections || { };
       var collections = $.extend({ }, (entity.metadata || { }).collections, (entity.metadata || { }).connections);
 
       if (!$.isEmptyObject(collections)) {
-        return $.tmpl("apigee.ui.collections.entity.collections.html", {
+        return $.tmpl("boostrack.ui.collections.entity.collections.html", {
           collections : collections
         }, {
           makeObjectTable : Usergrid.console.ui.makeObjectTable,
@@ -143,7 +143,7 @@ Usergrid.console.ui.collections = Usergrid.console.ui.collections || { };
         entity_contents = $.extend( false, entity_contents, {'collections': collections});
         delete entity_contents['metadata'];
       } catch(e) {}
-      return $.tmpl("apigee.ui.collections.entity.contents.html", {
+      return $.tmpl("boostrack.ui.collections.entity.contents.html", {
         entity : entity_contents
       }, {
         makeObjectTable : Usergrid.console.ui.makeObjectTable,
@@ -154,7 +154,7 @@ Usergrid.console.ui.collections = Usergrid.console.ui.collections || { };
     getMetadata : function() {
       var entity = this.options.entity;
       if (!$.isEmptyObject(entity.metadata)) {
-        return $.tmpl("apigee.ui.collections.entity.metadata.html", {
+        return $.tmpl("boostrack.ui.collections.entity.metadata.html", {
           metadata : entity.metadata
         }, {
           makeObjectTable : Usergrid.console.ui.makeObjectTable,
@@ -165,7 +165,7 @@ Usergrid.console.ui.collections = Usergrid.console.ui.collections || { };
     },
 
     getJson : function() {
-      return $.tmpl("apigee.ui.collections.entity.json.html", {
+      return $.tmpl("boostrack.ui.collections.entity.json.html", {
         entity : this.options.entity
       }, {
         makeObjectTable : Usergrid.console.ui.makeObjectTable,
@@ -282,7 +282,7 @@ Usergrid.console.ui.collections = Usergrid.console.ui.collections || { };
       var metadata = entity.metadata;
       if ($.isEmptyObject(metadata)) metadata = null;
 
-      return $.tmpl("apigee.ui.collections.entity.detail.html", {
+      return $.tmpl("boostrack.ui.collections.entity.detail.html", {
         entity : entity_contents,
         name : name,
         path : this.options.path,

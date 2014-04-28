@@ -277,7 +277,7 @@ function compare(a,b) {
       for (var i=0;i<elements.length;i++) {
         r.name = elements[i];
         r.count = data[elements[i].count];
-        $.tmpl('apigee.ui.collections.table_rows.html', r).appendTo('#collections-table');
+        $.tmpl('boostrack.ui.collections.table_rows.html', r).appendTo('#collections-table');
 
         var link = "Usergrid.console.pageOpenQueryExplorer('"+elements[i].name+"'); return false;";
         leftMenuContent += '<li id="collections-link-button-'+elements[i].name+'"><a href="#" onclick="'+link+'" class="collection-nav-links"><span class="nav-menu-text">/'+elements[i].name+'</span></a></li>';
@@ -287,7 +287,7 @@ function compare(a,b) {
       /*
       for (var i in data) {
         var this_data = data[i];
-        $.tmpl('apigee.ui.collections.table_rows.html', this_data).appendTo('#collections-table');
+        $.tmpl('boostrack.ui.collections.table_rows.html', this_data).appendTo('#collections-table');
 
         var link = "Usergrid.console.pageOpenQueryExplorer('"+data[i].name+"'); return false;";
         leftMenuContent += '<li id="collections-link-button-'+data[i].name+'"><a href="#" onclick="'+link+'" class="collection-nav-links"><span class="nav-menu-text">/'+data[i].name+'</span></a></li>';
@@ -505,7 +505,7 @@ function getCollectionCallback(response) {
             this_data.r.name = '[No value set]';
           }
         }
-        $.tmpl('apigee.ui.collection.table_rows.html', this_data).appendTo('#query-response-table');
+        $.tmpl('boostrack.ui.collection.table_rows.html', this_data).appendTo('#query-response-table');
       }
 
     }
@@ -791,7 +791,7 @@ function buildContentArea(obj2) {
   function buildIndexDropdown(menuId, indexes) {
     var menu = $("#" + menuId);
     menu.empty();
-    $.tmpl('apigee.ui.collections.query.indexes.html', indexes).appendTo(menu);
+    $.tmpl('boostrack.ui.collections.query.indexes.html', indexes).appendTo(menu);
   }
 
   function appendToCollectionsQuery(message){
@@ -841,7 +841,7 @@ function buildContentArea(obj2) {
       }
 
       if (count) {
-        $.tmpl('apigee.ui.applications.table_rows.html', data).appendTo(appList);
+        $.tmpl('boostrack.ui.applications.table_rows.html', data).appendTo(appList);
         appMenuTmpl.tmpl(data).appendTo(appMenu);
         appMenuTmpl.tmpl(data)
         appMenu.find("a").click(function selectApp(e) {
@@ -919,7 +919,7 @@ function buildContentArea(obj2) {
       for (var i in admins) {
         var admin = admins[i];
         admin.gravatar = get_gravatar(admin.email, 20);
-        $.tmpl('apigee.ui.admins.table_rows.html', admin).appendTo(sectionAdmins);
+        $.tmpl('boostrack.ui.admins.table_rows.html', admin).appendTo(sectionAdmins);
       }
     }
     if(sectionAdmins.is(':empty')){
@@ -972,7 +972,7 @@ function buildContentArea(obj2) {
         // hack ends here
 
         activity.actor.gravatar = get_gravatar(activity.actor.email, 20);
-        $.tmpl('apigee.ui.feed.table_rows.html', activity).appendTo(sectionActivities);
+        $.tmpl('boostrack.ui.feed.table_rows.html', activity).appendTo(sectionActivities);
       }
     }
 
@@ -1946,7 +1946,7 @@ function buildContentArea(obj2) {
     };
     var sectionId = $('#'+section+'-curl-container');
     sectionId.html("");
-    $.tmpl('apigee.ui.curl.detail.html', data).appendTo(sectionId);
+    $.tmpl('boostrack.ui.curl.detail.html', data).appendTo(sectionId);
      sectionId.show();
     if (!token) {
       $('#'+section+'-curl-token').hide();
@@ -2059,7 +2059,7 @@ function buildContentArea(obj2) {
         } else {
           this_data.picture = get_replacementGravatar(this_data.picture);
         }
-        $.tmpl('apigee.ui.users.table_rows.html', this_data).appendTo('#users-table');
+        $.tmpl('boostrack.ui.users.table_rows.html', this_data).appendTo('#users-table');
       }
     }
     showPagination('users');
@@ -2182,30 +2182,30 @@ function buildContentArea(obj2) {
   }
 
   function redrawUserProfile(data, curl){
-    redrawFormPanel('user-panel-profile', 'apigee.ui.panels.user.profile.html', data);
+    redrawFormPanel('user-panel-profile', 'boostrack.ui.panels.user.profile.html', data);
     showCurlCommand('user-panel-profile', curl);
   };
 
   function redrawUserMemberships(data, curl){
-    redrawPanel('user-panel-memberships', 'apigee.ui.panels.user.memberships.html', data);
+    redrawPanel('user-panel-memberships', 'boostrack.ui.panels.user.memberships.html', data);
     showCurlCommand('user-panel-memberships', curl);
     updateGroupsAutocomplete();
   };
 
   function redrawUserActivities(data, curl){
-    redrawPanel('user-panel-activities', 'apigee.ui.panels.user.activities.html', data);
+    redrawPanel('user-panel-activities', 'boostrack.ui.panels.user.activities.html', data);
     showCurlCommand('user-panel-activities', curl);
   };
 
   function redrawUserGraph(data, curlFollowing, curlFollowers){
-    redrawPanel('user-panel-graph', 'apigee.ui.panels.user.graph.html', data);
+    redrawPanel('user-panel-graph', 'boostrack.ui.panels.user.graph.html', data);
     showCurlCommand('user-panel-following', curlFollowing);
     showCurlCommand('user-panel-followers', curlFollowers);
     updateFollowUserAutocomplete();
   };
 
   function redrawUserPermissions(data, curlRoles, curlPermissions){
-    redrawPanel('user-panel-permissions', 'apigee.ui.panels.user.permissions.html', data);
+    redrawPanel('user-panel-permissions', 'boostrack.ui.panels.user.permissions.html', data);
     showCurlCommand('user-panel-roles', curlRoles);
     showCurlCommand('user-panel-permissions', curlPermissions);
     updateRolesAutocomplete();
@@ -2481,7 +2481,7 @@ function buildContentArea(obj2) {
       output.replaceWith('<table id="groups-table" class="table"><tbody><tr class="zebraRows users-row"><td class="checkboxo"><input type="checkbox" onclick="Usergrid.console.selectAllEntities(this);" /></td><td class="user-details bold-header">Path</td><td class="user-details bold-header">Title</td><td class="view-details">&nbsp;</td></tr></tbody></table>');
       for (i = 0; i < response.entities.length; i++) {
         var this_data = response.entities[i];
-        $.tmpl('apigee.ui.groups.table_rows.html', this_data).appendTo('#groups-table');
+        $.tmpl('boostrack.ui.groups.table_rows.html', this_data).appendTo('#groups-table');
       }
     }
 
@@ -2558,18 +2558,18 @@ function buildContentArea(obj2) {
   window.Usergrid.console.pageSelectGroupMemberships = pageSelectGroupMemberships;
 
   function redrawGroupDetails(data,curl){
-    redrawGroupForm('group-panel-details', 'apigee.ui.panels.group.details.html', data);
+    redrawGroupForm('group-panel-details', 'boostrack.ui.panels.group.details.html', data);
     showCurlCommand('group-panel-details', curl);
   }
 
   function redrawGroupMemberships(data, curl){
-    redrawPanel('group-panel-memberships', 'apigee.ui.panels.group.memberships.html', data);
+    redrawPanel('group-panel-memberships', 'boostrack.ui.panels.group.memberships.html', data);
     showCurlCommand('group-panel-memberships', curl);
     updateUsersAutocomplete();
   }
 
   function redrawGroupActivities(data, curl){
-    redrawPanel('group-panel-activities', 'apigee.ui.panels.group.activities.html', data);
+    redrawPanel('group-panel-activities', 'boostrack.ui.panels.group.activities.html', data);
     showCurlCommand('group-panel-activities', curl);
   }
 
@@ -2577,7 +2577,7 @@ function buildContentArea(obj2) {
     if (data.roles && data.roles.length == 0) {
       delete data.roles
     }
-    redrawPanel('group-panel-permissions', 'apigee.ui.panels.group.permissions.html', data);
+    redrawPanel('group-panel-permissions', 'boostrack.ui.panels.group.permissions.html', data);
     showCurlCommand('group-panel-roles', curlRoles);
     showCurlCommand('group-panel-permissions', curlPermissions);
     updateRolesForGroupsAutocomplete();
@@ -2793,7 +2793,7 @@ function buildContentArea(obj2) {
         var data = [
           {name: value.name,
            title: value.title}]
-        $.tmpl('apigee.ui.roles.table_rows.html', data).appendTo('#roles-table');
+        $.tmpl('boostrack.ui.roles.table_rows.html', data).appendTo('#roles-table');
       });
     }
     showPagination('roles');
@@ -2898,7 +2898,7 @@ function buildContentArea(obj2) {
       if (count == 0) {
         permissions = null;
       }
-      $.tmpl('apigee.ui.panels.role.permissions.html', {"role" : roleName, "permissions" : permissions}, {}).appendTo('#role-permissions');
+      $.tmpl('boostrack.ui.panels.role.permissions.html', {"role" : roleName, "permissions" : permissions}, {}).appendTo('#role-permissions');
       updatePermissionAutocompleteCollections();
     } else {
       section.html('<div class="alert">No permission information retrieved.</div>');
@@ -2932,7 +2932,7 @@ function buildContentArea(obj2) {
     if (response.entities) {
       data.users = response.entities;
     }
-    $.tmpl('apigee.ui.panels.role.users.html', {"data" : data}, {}).appendTo('#role-users');
+    $.tmpl('boostrack.ui.panels.role.users.html', {"data" : data}, {}).appendTo('#role-users');
     updateUsersForRolesAutocomplete();
     showCurlCommand('role-users', curl);
   }
@@ -2943,7 +2943,7 @@ function buildContentArea(obj2) {
     response.roleName = current_roleName;
     response.roleTitle = current_roleTitle;
     $('#role-panel-groups').html('');
-    $.tmpl('apigee.ui.role.groups.table_rows.html', response).appendTo('#role-panel-groups');
+    $.tmpl('boostrack.ui.role.groups.table_rows.html', response).appendTo('#role-panel-groups');
     updateGroupsForRolesAutocomplete();
     showCurlCommand('role-groups', curl);
   }
@@ -3251,7 +3251,7 @@ function buildContentArea(obj2) {
           }
         }
 
-        $.tmpl('apigee.ui.activities.table_rows.html', this_data).appendTo('#activities-table');
+        $.tmpl('boostrack.ui.activities.table_rows.html', this_data).appendTo('#activities-table');
       }
     }
     showPagination('activities');
@@ -4505,32 +4505,32 @@ function buildContentArea(obj2) {
 
   //load the templates only after the rest of the page is
   $(window).bind("load", function() {
-    Usergrid.console.ui.loadTemplate("apigee.ui.users.table_rows.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.groups.table_rows.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.roles.table_rows.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.role.groups.table_rows.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.activities.table_rows.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.collections.table_rows.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.role.users.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.role.permissions.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.user.profile.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.user.memberships.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.user.activities.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.user.graph.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.user.permissions.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.collection.table_rows.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.collections.query.indexes.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.group.details.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.group.memberships.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.group.activities.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.panels.group.permissions.html");
-    Usergrid.console.ui.loadTemplate("apigee.ui.curl.detail.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.users.table_rows.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.groups.table_rows.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.roles.table_rows.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.role.groups.table_rows.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.activities.table_rows.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.collections.table_rows.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.role.users.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.role.permissions.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.user.profile.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.user.memberships.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.user.activities.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.user.graph.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.user.permissions.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.collection.table_rows.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.collections.query.indexes.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.group.details.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.group.memberships.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.group.activities.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.panels.group.permissions.html");
+    Usergrid.console.ui.loadTemplate("boostrack.ui.curl.detail.html");
     $(window).resize();
   });
 
   //these templates are used on the front page and should be loaded up front
-  Usergrid.console.ui.loadTemplate("apigee.ui.applications.table_rows.html");
-  Usergrid.console.ui.loadTemplate("apigee.ui.admins.table_rows.html");
-  Usergrid.console.ui.loadTemplate("apigee.ui.feed.table_rows.html");
+  Usergrid.console.ui.loadTemplate("boostrack.ui.applications.table_rows.html");
+  Usergrid.console.ui.loadTemplate("boostrack.ui.admins.table_rows.html");
+  Usergrid.console.ui.loadTemplate("boostrack.ui.feed.table_rows.html");
 
 }
