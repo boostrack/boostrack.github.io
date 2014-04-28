@@ -2470,13 +2470,13 @@ table .span12 {
 
 /* line 116, ../../opt/vagrant_ruby/lib/ruby/gems/1.8/gems/bootstrap-sass-2.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-danger {
-  background-color: #da4e49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
+  background-color: #1b97d1;
+  background-image: -moz-linear-gradient(top, #1b97d1, #105a7d);
+  background-image: -ms-linear-gradient(top, #1b97d1, #105a7d);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1b97d1), to(##105a7d));
+  background-image: -webkit-linear-gradient(top, #1b97d1, #105a7d);
+  background-image: -o-linear-gradient(top, #1b97d1, #105a7d);
+  background-image: linear-gradient(top, #1b97d1, #105a7d);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEE5F5B', endColorstr='#FFBD362F', GradientType=0);
   border-color: #bd362f #bd362f #802420;
@@ -2485,7 +2485,7 @@ table .span12 {
 }
 /* line 431, ../../opt/vagrant_ruby/lib/ruby/gems/1.8/gems/bootstrap-sass-2.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-danger:hover, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
-  background-color: #bd362f;
+  background-color: #1b97d1;
 }
 /* line 436, ../../opt/vagrant_ruby/lib/ruby/gems/1.8/gems/bootstrap-sass-2.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-danger:active, .btn-danger.active {
