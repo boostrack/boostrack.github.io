@@ -47,8 +47,8 @@ QUnit.config.reorder = false;
 asyncTest("logging-in with loginAdmin(credentials)", function() {
   expect(1);
   usergrid.client.loginAdmin(
-    "fjendle@apigee.com",
-    "mafalda1",
+    "dev-test@boostrack.com",
+    "xpto",
     defaultSuccess,
     defaultError
   );

@@ -40,7 +40,7 @@
   var self = this;
 
   var emailRegex = new RegExp("^(([0-9a-zA-Z]+[_\+.-]?)+@[0-9a-zA-Z]+[0-9,a-z,A-Z,.,-]*(.){1}[a-zA-Z]{2,4})+$");
-  var emailAllowedCharsMessage = 'eg. example@apigee.com';
+  var emailAllowedCharsMessage = 'eg. example@boostrack.com';
 
   var passwordRegex = new RegExp("^([0-9a-zA-Z@#$%^&!?<>;:.,'\"~*=+_\[\\](){}/\\ |-])+$");
   var passwordAllowedCharsMessage = 'This field only allows: A-Z, a-z, 0-9, ~ @ # % ^ & * ( ) - _ = + [ ] { } \\ | ; : \' " , . < > / ? !';
@@ -169,7 +169,7 @@
       }]
     );
     var bearerTokenString = encodeURIComponent(bearerTokenJson);
-    var url = 'https://apigee.com/apigeedev/console/usergrid?v=2&embedded=true&auth=' + bearerTokenString;
+    var url = 'https://boostrack.com/boostrackdev/console/usergrid?v=2&embedded=true&auth=' + bearerTokenString;
     return url;
   }
   Usergrid.console.getAccessTokenURL = getAccessTokenURL;
@@ -943,14 +943,14 @@ function buildContentArea(obj2) {
 
   function get_gravatar(email, size) {
     var size = size || 50;
-    return 'https://secure.gravatar.com/avatar/' + MD5(email) + '?s=' + size + encodeURI("&d=http://apigee.com/usergrid/images/user_profile.png");
+    return 'https://secure.gravatar.com/avatar/' + MD5(email) + '?s=' + size + encodeURI("&d=http://boostrack.com/portal/images/user_profile.png");
   }
 
   function get_replacementGravatar(picture) {
     picture = picture.replace(/^http:\/\/www.gravatar/i, 'https://secure.gravatar');
-    //note: changing this to use the image on apigee.com - since the gravatar default won't work on any non-public domains such as localhost
+    //note: changing this to use the image on boostrack.com - since the gravatar default won't work on any non-public domains such as localhost
     //this_data.picture = this_data.picture + encodeURI("?d="+window.location.protocol+"//" + window.location.host + window.location.pathname + "images/user_profile.png");
-    picture = picture + encodeURI("?d=http://apigee.com/usergrid/images/user_profile.png");
+    picture = picture + encodeURI("?d=http://boostrack.com/portal/images/user_profile.png");
     return picture;
   }
 
@@ -2277,9 +2277,9 @@ function buildContentArea(obj2) {
       var picture = window.location.protocol+ "//" + window.location.host + window.location.pathname + "images/user_profile.png";
       if (entity.picture) {
         entity.picture = entity.picture.replace(/^http:\/\/www.gravatar/i, 'https://secure.gravatar');
-        //note: changing this to use the image on apigee.com - since the gravatar default won't work on any non-public domains such as localhost
+        //note: changing this to use the image on boostrack.com - since the gravatar default won't work on any non-public domains such as localhost
         //this_data.picture = this_data.picture + encodeURI("?d="+window.location.protocol+"//" + window.location.host + window.location.pathname + "images/user_profile.png");
-        picture = entity.picture + encodeURI("?d=http://apigee.com/usergrid/images/user_profile.png");
+        picture = entity.picture + encodeURI("?d=http://boostrack.com/portal/images/user_profile.png");
       }
 
     var data = {
@@ -3242,12 +3242,12 @@ function buildContentArea(obj2) {
           this_data.actor.picture = window.location.protocol+ "//" + window.location.host + window.location.pathname + "images/user_profile.png"
         } else {
           this_data.actor.picture = this_data.actor.picture.replace(/^http:\/\/www.gravatar/i, 'https://secure.gravatar');
-          //note: changing this to use the image on apigee.com - since the gravatar default won't work on any non-public domains such as localhost
+          //note: changing this to use the image on boostrack.com - since the gravatar default won't work on any non-public domains such as localhost
           //this_data.picture = this_data.picture + encodeURI("?d="+window.location.protocol+"//" + window.location.host + window.location.pathname + "images/user_profile.png");
           if (~this_data.actor.picture.indexOf('http')) {
-            this_data.actor.picture = this_data.actor.picture + encodeURI("?d=http://apigee.com/usergrid/images/user_profile.png");
+            this_data.actor.picture = this_data.actor.picture + encodeURI("?d=http://boostrack.com/portal/images/user_profile.png");
           } else {
-            this_data.actor.picture = 'http://apigee.com/usergrid/images/user_profile.png';
+            this_data.actor.picture = 'http://boostrack.com/portal/images/user_profile.png';
           }
         }
 

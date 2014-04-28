@@ -1,9 +1,9 @@
 /**
  *  App SDK is a collection of classes designed to make working with
  *  the Appigee App Services API as easy as possible.
- *  Learn more at http://apigee.com/docs
+ *  Learn more at http://boostrack.com/docs
  *
- *   Copyright 2012 Apigee Corporation
+ *   Copyright 2014 Boostrack Corporation
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ Usergrid.SDK_VERSION = '0.9.9';
  *  Usergrid.Query is a class for holding all query information and paging state
  *
  *  @class Query
- *  @author Rod Simpson (rod@apigee.com)
+ *  (dev@boostrack.com)
  */
 
 (function () {
@@ -417,7 +417,7 @@ Usergrid.SDK_VERSION = '0.9.9';
  *  A class to Model a Usergrid Entity.
  *
  *  @class Entity
- *  @author Rod Simpson (rod@apigee.com)
+ *  (dev@boostrack.com)
  */
 (function () {
   /**
@@ -685,7 +685,7 @@ Usergrid.SDK_VERSION = '0.9.9';
  *  additional funcitonality such as paging, and saving
  *
  *  @class Collection
- *  @author Rod Simpson (rod@apigee.com)
+ *  (dev@boostrack.com)
  */
 (function () {
   /**
@@ -1135,7 +1135,7 @@ Usergrid.SDK_VERSION = '0.9.9';
  *  logInAppUser (username, password, successCallback, failureCallback)
  *
  *  @class Usergrid.ApiClient
- *  @author Rod Simpson (rod@apigee.com)
+ *  (dev@boostrack.com)
  *
  */
 Usergrid.M = 'ManagementQuery';
@@ -1824,7 +1824,7 @@ Usergrid.ApiClient = (function () {
  * validation is a Singleton that provides methods for validating common field types
  *
  * @class Usergrid.validation
- * @author Rod Simpson (rod@apigee.com)
+ * (dev@boostrack.com)
 **/
 Usergrid.validation = (function () {
 

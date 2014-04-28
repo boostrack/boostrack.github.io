@@ -1,4 +1,4 @@
-$apigee-logo           : inline-image('logo-white.png');
+$apigee-logo           : inline-image('/assets/img/boostrack-logo.png');
 $redApigee             : #ff4300;
 $grayApigee            : #575560;
 $border                : #c9c9c9;
@@ -1796,8 +1796,8 @@ a.data-explorer-link {
     background-image: image-url("glyphicons_halflings_135_wrench.png") !important;
 }
 
-//Apigee Specific data
-.apigee {
+//Boostrack Specific data
+.boostrack {
     .logo {
         width: 57px;
     }
