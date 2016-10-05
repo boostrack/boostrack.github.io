@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/hflambo
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.boostrack.com
+  * I am hflambo (https://keybase.io/hflambo) on keybase.
+  * I have a public key with fingerprint 70B6 DFC2 16E9 1D98 E17A  4E37 F955 E6E5 A9D9 51F1
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101c7827420164ebd489163af2714a7320a66e22860bc6d1046a20cbba04710ae7c0a",
+            "fingerprint": "70b6dfc216e91d98e17a4e37f955e6e5a9d951f1",
+            "host": "keybase.io",
+            "key_id": "f955e6e5a9d951f1",
+            "kid": "0101c7827420164ebd489163af2714a7320a66e22860bc6d1046a20cbba04710ae7c0a",
+            "uid": "096ecc19f9406feb316267e9823dce19",
+            "username": "hflambo"
+        },
+        "service": {
+            "hostname": "www.boostrack.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1475657928,
+    "expire_in": 157680000,
+    "prev": "701a8259076a4b9c1d4acb48f8551b2b31aa0ab1cc579824668e47a650e03675",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.58
+Comment: https://keybase.io/crypto
+
+yMInAnicrVJbaBNBFE18VC0o/bRfwqAgEpqZze7sbhDxI1XwjSIqtMSZ2dm4tsnG
+3W1q0WJVaESkVnxgHz6wHypWQbGallbb+EalX8UHWq1IERRBUXxGnK31z0/nZ7iX
+c86cc+fenD4xUBz8MkTaKwdWzg3eH2irCaz71H93G6C2UQei20AVH7t4tcFdL15l
+GSAKIIKIqZqkyhJEWObUkDUd4QgxJRXJRI1IkGDMJUnDkDJsIChjIkFGKYGyiiDh
+KoMEhIBppRLcSTtWyhOyKqTYMJmEMNeRoWscqUTmEdXUFYVjrhDd0BVkIkHcZLs+
+Q5ijxOVlli16ooiP2fsH/j/7rvkjp2POGNJNXYbY5DSCsIRVrmtSxGAc6T7Q5U6K
+JLlAbzKrSZLaoD4ERDNjMe7P1Q8yDqitrS2jtqgdwqrKmJ0U/LRjezazq32+56Xd
+qE/36tJjeE7j40pxaqUMMUvByHDHtewUiCKBZJ7lSyNZVbCi6pIWAnxr2nJ43PIR
+ioo1KI7/Ds+M/QAimqToUMVEpjpDhkwYlTVTUxREJZGQEEgoYkyoaZKMscZllWAF
+chjBqgL8bFtSNojqwiZJCEnXSqSIV+NwUJ/vr5gUCBYHiiZP8HcsUDyt5O/mPc1P
+KZQUuprurI/NKAeHZynHC0vM7lXJY3V237UNG4oWzW8d/LXxdGnn1VKzPZfo2D7l
+/ujmRwuCnUPWXvfK08pzXcPx6hi7NrUdDI7c7t86lGwLN+/evHCweNGRxs6jl4e7
+d5wDseirnBleHu4esEY/vF/68FhF03Djmkzzo1zwbHb72l0fXx5ovbQq65LeX9kV
++fcTg19LIiWtDd7bdN/Uxw+Kdobmvf7c1HZvVrDl55n2fS3Pnu960Xme9+5pPUjn
+9PQs/tGxrLI538VPuuUjP2p3fzvypqXjbcetPSfmFS6O1Ddcd4xDufC67PmvePWp
+7zNvPMlUrrzUuF/JtrybPdwQil34DcD2T2I=
+=DDqg
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hflambo
+
+==================================================================
+
